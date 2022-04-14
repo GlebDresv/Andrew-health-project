@@ -16,6 +16,7 @@ services:
     image: php:8-fpm
     volumes:
       - ./app:/app
+      - ./docker/php/php.ini:/usr/local/etc/php/php.ini
     depends_on:
       - mysql
   mysql:
