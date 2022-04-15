@@ -1,33 +1,29 @@
 <?php
+ob_start();
+$read = readfile("read.txt");
+ob_end_clean();
+var_dump($read);
+$name = $_POST["name"];
+$city = $_POST["city"];
+$mass = $_POST["mass"];
+$dsn = 'mysql:host=mysql;dbname=db';
 $user = "root";
 $pass = "root";
-$peoples = [["Пупкин Степан Леонидович","Киев","120"],["Акопян Светлана Юриевна","Ивано-Франковск","74"],["Заболотная Юлия Сергеевна","Лондон","87"]];
 
-try {
-    $dbh = new PDO('mysql:host=mysql;dbname=db', $user, $pass);
-    echo "Подключились\n";
-} catch (Exception $e) {
-    die("Не удалось подключиться: " . $e->getMessage());
-}
-
-try {
+    $dbh = new PDO($dsn, $user, $pass);
     $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    $dbh->beginTransaction();
-    foreach ($peoples as $people) {
-        $dbh->exec("insert into db (name, city, mass) values ($people[1], $people[2], $people[3])");
+
+    $sql_in = "INSERT INTO people(name, city, mass)" .
+        " VALUES(:name, :city, :mass)";
+
+    if($name != null and $city != null and $mass != null){
+        $statement = $dbh->prepare($sql_in);
+        $statement->execute([':name'=>$name,':city'=>$city,':mass'=>$mass]);
     }
-    $dbh->commit();
-    $dbh = null;
-}
-catch (Exception $e) {
-    $dbh->rollBack();
-    echo "Ошибка: " . $e->getMessage();
-}
 
-?>
-
-
-
-
-
-
+    $sql_out = "SELECT * FROM people";
+    foreach ($dbh->query($sql_out) as $row) {
+        print $row['name'] . "\t";
+        print $row['city'] . "\t";
+        print $row['mass'] . "<br>";
+    }
