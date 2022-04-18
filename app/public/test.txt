@@ -1,0 +1,6 @@
+<?php
+$peoples = ["Iryna","Ihor","Bruno","Sasha","Herby","Alex"];
+$cities = ['Kiev',"Paris","Narnia","Vienna","Helsinki","Budapest","Dublin"];
+echo $peoples[rand(0,count($peoples)-1)]."\t";
+echo $cities[rand(0,count($cities)-1)]."\t";
+echo rand(20,120);
