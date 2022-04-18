@@ -1,29 +1,23 @@
 <?php
-ob_start();
-$read = readfile("read.txt");
-ob_end_clean();
-var_dump($read);
-$name = $_POST["name"];
-$city = $_POST["city"];
-$mass = $_POST["mass"];
-$dsn = 'mysql:host=mysql;dbname=db';
-$user = "root";
-$pass = "root";
+require_once "functions.php";
 
-    $dbh = new PDO($dsn, $user, $pass);
-    $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $peoples = ["Iryna", "Ihor", "Bruno", "Sasha", "Herby", "Alex"];
+    $cities = ['Kiev', "Paris", "Narnia", "Vienna", "Helsinki", "Budapest", "Dublin"];
 
-    $sql_in = "INSERT INTO people(name, city, mass)" .
-        " VALUES(:name, :city, :mass)";
-
-    if($name != null and $city != null and $mass != null){
-        $statement = $dbh->prepare($sql_in);
-        $statement->execute([':name'=>$name,':city'=>$city,':mass'=>$mass]);
+    for ($i = 0; $i < 10; $i++) {
+        $row = [$peoples[rand(0, count($peoples) - 1)], $cities[rand(0, count($cities) - 1)], (rand(20, 120))];
+        $file_content[] = implode(",", $row);
     }
+    $res = implode("\n", $file_content);
+    file_force_download($res);
+} else {
+    ?>
+    <form method="POST">
+        <input type="submit" class="button" value="Download" name="button">
+    </form>
+    <?php
+}
 
-    $sql_out = "SELECT * FROM people";
-    foreach ($dbh->query($sql_out) as $row) {
-        print $row['name'] . "\t";
-        print $row['city'] . "\t";
-        print $row['mass'] . "<br>";
-    }
+
+?>
