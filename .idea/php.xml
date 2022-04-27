@@ -92,4 +92,9 @@
   <component name="PhpProjectSharedConfiguration">
     <option name="suggestChangeDefaultLanguageLevel" value="false" />
   </component>
+  <component name="PhpUnit">
+    <phpunit_settings>
+      <PhpUnitSettings custom_loader_path="$PROJECT_DIR$/app/vendor/autoload.php" />
+    </phpunit_settings>
+  </component>
 </project>
