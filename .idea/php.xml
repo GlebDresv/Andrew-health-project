@@ -87,6 +87,7 @@
       <path value="$PROJECT_DIR$/app/vendor/bower-asset/jquery" />
       <path value="$PROJECT_DIR$/app/vendor/bower-asset/yii2-pjax" />
       <path value="$PROJECT_DIR$/app/vendor/codeception/codeception" />
+      <path value="$PROJECT_DIR$/app/vendor/almasaeed2010/adminlte" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration">
