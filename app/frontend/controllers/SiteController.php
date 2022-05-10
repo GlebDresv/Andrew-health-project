@@ -2,6 +2,8 @@
 
 namespace frontend\controllers;
 
+use common\models\UserAuth;
+use common\models\User;
 use frontend\models\ResendVerificationEmailForm;
 use frontend\models\VerifyEmailForm;
 use Yii;
@@ -15,6 +17,8 @@ use frontend\models\PasswordResetRequestForm;
 use frontend\models\ResetPasswordForm;
 use frontend\models\SignupForm;
 use frontend\models\ContactForm;
+use yii\data\ArrayDataProvider;
+use yii\data\ActiveDataProvider;
 
 /**
  * Site controller
@@ -75,7 +79,18 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        return $this->render('index');
+        $user = UserAuth::find()->all();
+        $dataProvider = new ArrayDataProvider([
+            'allModels' => $user,
+            'pagination' => [
+                'pageSize' => 20,
+            ]
+        ]);
+
+        return $this->render('index', [
+            'dataProvider' => $dataProvider,
+
+        ]);
     }
 
     /**
@@ -137,13 +152,16 @@ class SiteController extends Controller
     }
 
     /**
-     * Displays about page.
+     * Displays profile page.
      *
      * @return mixed
      */
-    public function actionAbout()
+    public function actionProfile()
     {
-        return $this->render('about');
+        $user = User::find()->where('username' == Yii::$app->user->identity->username)->one();
+        return $this->render('profile', [
+            'user' => $user,
+        ]);
     }
 
     /**
@@ -217,8 +235,8 @@ class SiteController extends Controller
      * Verify email address
      *
      * @param string $token
-     * @throws BadRequestHttpException
      * @return yii\web\Response
+     * @throws BadRequestHttpException
      */
     public function actionVerifyEmail($token)
     {

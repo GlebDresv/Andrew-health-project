@@ -29,7 +29,7 @@ backend\web\assets\AdminLteAsset::register($this);
 
     <div class="login-box">
         <div class="login-logo">
-            <?= Html::a('<b>Admin</b>LTE', ['/site/login']); ?>
+            <?= Html::a('<b>User</b>LTE', ['/site/login']); ?>
         </div>
 
         <?= Alert::widget(); ?>
