@@ -7,12 +7,11 @@ use Yii;
 /**
  * This is the model class for table "people".
  *
+ * @property int $id
  * @property string $name
  * @property string $city
- * @property int $mass
- * @property int $id
  */
-class People extends \yii\db\ActiveRecord
+class Member extends \yii\db\ActiveRecord
 {
     /**
      * {@inheritdoc}
@@ -28,10 +27,8 @@ class People extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['name', 'city', 'mass'], 'required'],
-            [['mass'], 'integer'],
-            [['name'], 'string', 'max' => 100],
-            [['city'], 'string', 'max' => 20],
+            [['name', 'city'], 'required'],
+            [['name', 'city'], 'string', 'max' => 255],
         ];
     }
 
@@ -41,10 +38,9 @@ class People extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
+            'id' => 'ID',
             'name' => 'Name',
             'city' => 'City',
-            'mass' => 'Mass',
-            'id' => 'ID',
         ];
     }
 }
