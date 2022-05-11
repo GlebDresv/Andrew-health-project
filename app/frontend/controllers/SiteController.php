@@ -154,20 +154,6 @@ class SiteController extends Controller
         ]);
     }
 
-    /**
-     * Displays profile page.
-     *
-     * @return mixed
-     */
-    public function actionProfile()
-    {
-        $personal_info = User::find()->where('username' == Yii::$app->user->identity->username)->one();
-        $public_info = PublicInfo::find()->where('userid' == Yii::$app->user->id)->one();
-        return $this->render('profile', [
-            'personal_info' => $personal_info,
-            'public_info' => $public_info,
-        ]);
-    }
 
     /**
      * Signs user up.

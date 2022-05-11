@@ -3,7 +3,7 @@
 use yii\db\Migration;
 
 /**
- * Class m220427_181115_add_admin_user
+ * Class m220427_181115_add_default_user
  */
 class m220427_181115_add_default_user extends Migration
 {
