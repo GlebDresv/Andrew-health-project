@@ -82,6 +82,9 @@ class SiteController extends Controller
         $user = UserAuth::find()->all();
         $dataProvider = new ArrayDataProvider([
             'allModels' => $user,
+            'sort' => [
+                'attributes' => ['distance_day', 'distance_week', 'distance_all'],
+            ],
             'pagination' => [
                 'pageSize' => 20,
             ]
@@ -158,9 +161,11 @@ class SiteController extends Controller
      */
     public function actionProfile()
     {
-        $user = User::find()->where('username' == Yii::$app->user->identity->username)->one();
+        $personal_info = User::find()->where('username' == Yii::$app->user->identity->username)->one();
+        $public_info = UserAuth::find()->where('userid' == Yii::$app->user->id)->one();
         return $this->render('profile', [
-            'user' => $user,
+            'personal_info' => $personal_info,
+            'public_info' => $public_info,
         ]);
     }
 
