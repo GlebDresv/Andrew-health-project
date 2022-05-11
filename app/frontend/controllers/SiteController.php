@@ -17,7 +17,6 @@ use frontend\models\PasswordResetRequestForm;
 use frontend\models\ResetPasswordForm;
 use frontend\models\SignupForm;
 use frontend\models\ContactForm;
-use yii\data\ArrayDataProvider;
 use yii\data\ActiveDataProvider;
 
 /**
@@ -79,9 +78,9 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        $user = PublicInfo::find()->all();
-        $dataProvider = new ArrayDataProvider([
-            'allModels' => $user,
+        $user = PublicInfo::find()->orderBy('distance_all')->limit(100);
+        $dataProvider = new ActiveDataProvider([
+            'query' => $user,
             'sort' => [
                 'attributes' => ['distance_day', 'distance_week', 'distance_all'],
             ],
