@@ -5,7 +5,7 @@ use yii\db\Migration;
 /**
  * Class m220427_174111_people
  */
-class m130524201442_public extends Migration
+class m130524_201442_public extends Migration
 {
     /**
      * {@inheritdoc}
@@ -14,9 +14,9 @@ class m130524201442_public extends Migration
     {
         $this->createTable('public_info', [
             'userid' => $this->primaryKey(),
-            'phone_number' => $this->integer()->notNull(),
+            'phone_number' => $this->integer()->defaultValue(Null),
             'full_name' => $this->string()->notNull()->defaultValue('No Name'),
-            'about' => $this->string()->notNull(),
+            'about' => $this->string()->notNull()->defaultValue(Null),
             'image' => $this->string()->defaultValue('../img/default.png'),
             'height' => $this->smallInteger(3)->unsigned()->defaultValue(Null),
             'age' => $this->smallInteger(3)->unsigned()->defaultValue(Null),
