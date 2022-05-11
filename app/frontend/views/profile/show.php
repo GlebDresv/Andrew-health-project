@@ -12,7 +12,7 @@ use yii\helpers\Html;
  */
 
 
-$this->title = 'Profile';
+$this->title = 'Show';
 ?>
 <div class="site-profile">
     <h1><?= Html::encode($this->title) ?></h1>

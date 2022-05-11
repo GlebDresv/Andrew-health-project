@@ -45,7 +45,8 @@ return [
             'showScriptName' => false,
             'rules' => [
                 '' => 'site/index',
-                '<action>' => 'site/<action>'
+                '<action>' => 'site/<action>',
+                'profile/<id:\d+>' => 'profile/show',
             ],
         ],
     ],
