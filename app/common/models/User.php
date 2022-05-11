@@ -213,6 +213,6 @@ class User extends ActiveRecord implements IdentityInterface
     }
     public function getPublicinfo()
     {
-        return $this->hasMany(UserAuth::class, ['userid' => 'id']);
+        return $this->hasOne(UserAuth::class, ['userid' => 'id']);
     }
 }
