@@ -21,17 +21,15 @@ use common\models\User;
  * @property int $distance_all
  * @property int $desired_distance
  * @property int $recommended_distance
- *
- * @property User $user
  */
-class UserAuth extends \yii\db\ActiveRecord
+class PublicInfo extends \yii\db\ActiveRecord
 {
     /**
      * {@inheritdoc}
      */
     public static function tableName()
     {
-        return 'user_auth';
+        return 'public_info';
     }
 
     /**
@@ -77,7 +75,7 @@ class UserAuth extends \yii\db\ActiveRecord
      *
      * @return \yii\db\ActiveQuery
      */
-    public function getPrivateinfo()
+    public function getUser()
     {
         return $this->hasOne(User::class, ['id' => 'userid']);
     }
