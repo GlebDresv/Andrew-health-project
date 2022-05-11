@@ -2,7 +2,7 @@
 
 namespace common\models;
 
-use common\models\UserAuth;
+use common\models\PublicInfo;
 use Yii;
 use yii\base\NotSupportedException;
 use yii\behaviors\TimestampBehavior;
@@ -211,8 +211,8 @@ class User extends ActiveRecord implements IdentityInterface
     {
         $this->password_reset_token = null;
     }
-    public function getPublicinfo()
+    public function getPublicInfo()
     {
-        return $this->hasOne(UserAuth::class, ['userid' => 'id']);
+        return $this->hasOne(PublicInfo::class, ['userid' => 'id']);
     }
 }

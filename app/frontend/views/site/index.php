@@ -1,10 +1,11 @@
 <?php
 
-use common\models\UserAuth;
+use common\models\PublicInfo;
 use yii\grid\GridView;
 
-/** @var yii\web\View $this
- * @var $dataProvider UserAuth[]
+/**
+ * @var yii\web\View $this
+ * @var $dataProvider PublicInfo
  */
 
 $this->title = 'My Yii Application';

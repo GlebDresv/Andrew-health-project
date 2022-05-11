@@ -2,7 +2,7 @@
 
 namespace frontend\controllers;
 
-use common\models\UserAuth;
+use common\models\PublicInfo;
 use common\models\User;
 use frontend\models\ResendVerificationEmailForm;
 use frontend\models\VerifyEmailForm;
@@ -79,7 +79,7 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        $user = UserAuth::find()->all();
+        $user = PublicInfo::find()->all();
         $dataProvider = new ArrayDataProvider([
             'allModels' => $user,
             'sort' => [
@@ -162,7 +162,7 @@ class SiteController extends Controller
     public function actionProfile()
     {
         $personal_info = User::find()->where('username' == Yii::$app->user->identity->username)->one();
-        $public_info = UserAuth::find()->where('userid' == Yii::$app->user->id)->one();
+        $public_info = PublicInfo::find()->where('userid' == Yii::$app->user->id)->one();
         return $this->render('profile', [
             'personal_info' => $personal_info,
             'public_info' => $public_info,

@@ -5,14 +5,14 @@ use yii\db\Migration;
 /**
  * Class m220427_174111_people
  */
-class m220427_201115_user_authorized extends Migration
+class m220427_201115_public extends Migration
 {
     /**
      * {@inheritdoc}
      */
     public function up()
     {
-        $this->createTable('user_auth', [
+        $this->createTable('public_info', [
             'userid' => $this->primaryKey(),
             'phone_number' => $this->integer()->notNull(),
             'full_name' => $this->string()->notNull()->defaultValue('No Name'),
@@ -26,7 +26,7 @@ class m220427_201115_user_authorized extends Migration
             'desired_distance' => $this->integer()->unsigned()->notNull(),
             'recommended_distance' => $this->integer()->unsigned()->notNull(),
         ]);
-        $this->addForeignKey('user_id', 'user_auth', 'userid', 'user', 'id', 'CASCADE', 'CASCADE');
+        $this->addForeignKey('user_id', 'public_info', 'userid', 'user', 'id', 'CASCADE', 'CASCADE');
     }
 
     /**
@@ -34,7 +34,7 @@ class m220427_201115_user_authorized extends Migration
      */
     public function down()
     {
-        $this->dropForeignKey('user_id', 'user_auth');
-        $this->dropTable('user_auth');
+        $this->dropForeignKey('user_id', 'public_info');
+        $this->dropTable('public_info');
     }
 }
