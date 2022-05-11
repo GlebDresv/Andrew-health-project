@@ -14,9 +14,9 @@ class m130525_201442_add_table_public extends Migration
     {
         $this->createTable('public_info', [
             'userid' => $this->primaryKey(),
-            'phone_number' => $this->integer()->defaultValue(Null),
-            'full_name' => $this->string()->notNull()->defaultValue('No Name'),
-            'about' => $this->string()->notNull()->defaultValue(Null),
+            'phone_number' => $this->integer(),
+            'full_name' => $this->string()->notNull()->defaultValue(''),
+            'about' => $this->string()->notNull()->defaultValue(''),
             'image' => $this->string()->defaultValue('../img/default.png'),
             'height' => $this->smallInteger(3)->unsigned()->defaultValue(Null),
             'age' => $this->smallInteger(3)->unsigned()->defaultValue(Null),
