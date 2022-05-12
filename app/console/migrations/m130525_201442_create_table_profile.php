@@ -5,7 +5,7 @@ use yii\db\Migration;
 /**
  * Class m130524_201442_add_table_profile
  */
-class m130525_201442_add_table_profile extends Migration
+class m130525_201442_create_table_profile extends Migration
 {
     /**
      * {@inheritdoc}
@@ -15,7 +15,7 @@ class m130525_201442_add_table_profile extends Migration
         $this->createTable('profile_info', [
             'userid' => $this->primaryKey(),
             'phone_number' => $this->integer(),
-            'full_name' => $this->string()->notNull()->defaultValue(''),
+            'full_name' => $this->string()->notNull()->defaultValue(null),
             'about' => $this->string()->notNull()->defaultValue(''),
             'image' => $this->string()->defaultValue('../img/default.png'),
             'height' => $this->smallInteger(3)->unsigned()->defaultValue(Null),

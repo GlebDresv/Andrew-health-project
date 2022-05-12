@@ -17,12 +17,12 @@ class ProfileController extends Controller
     public function actionIndex()
     {
         /**
-         * @var $userInfo User;
+         * @var $user User;
          */
-        $userInfo = yii::$app->user->identity;
-        $profileInfo = $userInfo->publicInfo;
-        return $this->render('show', [
-            'userInfo' => $userInfo,
+        $user = yii::$app->user->identity;
+        $profileInfo = $user->publicInfo;
+        return $this->render('index', [
+            'user' => $user,
             'profileInfo' => $profileInfo,
         ]);
     }
@@ -36,13 +36,13 @@ class ProfileController extends Controller
     public function actionShow($id)
     {
         /**
-         * @var $userInfo User;
+         * @var $user User;
          */
-        $userInfo = User::findOne(['id' => $id]);
-        if ($userInfo != null) {
-            $profileInfo = $userInfo->publicInfo;
+        $user = User::findOne(['id' => $id]);
+        if ($user) {
+            $profileInfo = $user->publicInfo;
             return $this->render('show', [
-                'userInfo' => $userInfo,
+                'user' => $user,
                 'profileInfo' => $profileInfo,
             ]);
         } else {
