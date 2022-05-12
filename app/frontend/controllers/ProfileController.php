@@ -3,8 +3,10 @@
 namespace frontend\controllers;
 
 use common\models\User;
+use frontend\models\ProfileForm;
 use Yii;
 use yii\web\Controller;
+use yii\web\NotFoundHttpException;
 
 class ProfileController extends Controller
 {
@@ -16,15 +18,16 @@ class ProfileController extends Controller
     public function actionIndex()
     {
         /**
-         * @var $personalInfo User;
+         * @var $userInfo User;
          */
-        $personalInfo = Yii::$app->user->identity;
-        $publicInfo = $personalInfo->publicInfo;
-        return $this->render('index', [
-            'personalInfo' => $personalInfo,
-            'publicInfo' => $publicInfo,
+        $userInfo = yii::$app->user->identity;
+        $profileInfo = $userInfo->publicInfo;
+        return $this->render('show', [
+            'userInfo' => $userInfo,
+            'profileInfo' => $profileInfo,
         ]);
     }
+
 
     /**
      * Displays show page.
@@ -33,14 +36,19 @@ class ProfileController extends Controller
      */
     public function actionShow($id)
     {
-        /**
-         * @var $personalInfo User;
-         */
-        $personalInfo = User::findOne(['id'=>$id]);
-        $publicInfo = $personalInfo->publicInfo;
-        return $this->render('index', [
-            'personalInfo' => $personalInfo,
-            'publicInfo' => $publicInfo,
-        ]);
+        $res = User::findOne(['id' => $id]);
+        if ($res != null) {
+            /**
+             * @var $userInfo User;
+             */
+            $userInfo = User::findOne(['id' => $id]);
+            $profileInfo = $userInfo->publicInfo;
+            return $this->render('show', [
+                'userInfo' => $userInfo,
+                'profileInfo' => $profileInfo,
+            ]);
+        } else {
+            throw new NotFoundHttpException();
+        }
     }
 }

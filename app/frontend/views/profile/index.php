@@ -1,31 +1,43 @@
 <?php
 
-use common\models\PublicInfo;
+use common\models\ProfileInfo;
 use common\models\User;
+use frontend\models\ProfileForm;
 use yii\helpers\Html;
+use yii\widgets\ActiveForm;
 
 /**
  *
  * @var yii\web\View $this
- * @var User $personalInfo
- * @var PublicInfo $publicInfo
+ * @var User $userInfo
+ * @var ProfileInfo $profileInfo
+ * @var ProfileForm $model
  */
 
 
 $this->title = 'Profile';
 ?>
-<div class="site-profile">
+<div class="profile-index">
     <h1><?= Html::encode($this->title) ?></h1>
-    <img src="<?= $publicInfo->image ?>" width="220px" height="200px" border-radius="50%" alt="">
-    <p><b><?= $personalInfo->username . ' (' . $publicInfo->full_name . ')' ?></b>
-        <br><?= $personalInfo->email ?><br>
-        <?= $publicInfo->phone_number ?></p>
-    <p><?= $publicInfo->about ?></p>
-    Distance:
-    <ul>
-        <li>Today: <?= $publicInfo->distance_day ?></li>
-        <li>Week: <?= $publicInfo->distance_week ?></li>
-        <li>All: <?= $publicInfo->distance_all ?></li>
-    </ul>
-    <p>desired: <?= $publicInfo->desired_distance ?> | recommended: <?= $publicInfo->recommended_distance ?></p>
+    <img src="<?= $profileInfo->image ?>" width="220px" height="200px" border-radius="50%" alt="">
+    <?php $form = ActiveForm::begin(); ?>
+
+    <?= $form->field($model, 'fullName')->textInput(['value' => $profileInfo->full_name]) ?>
+
+    <?= $form->field($model, 'phoneNumber')->textInput(['type' => 'number', 'value' => $profileInfo->phone_number]) ?>
+
+    <?= $form->field($model, 'about')->textInput([ 'value' => $profileInfo->about]) ?>
+
+    <?= $form->field($model, 'age')->textInput(['type' => 'number', 'value' => $profileInfo->age]) ?>
+
+    <?= $form->field($model, 'height')->textInput(['type' => 'number', 'value' => $profileInfo->height]) ?>
+
+    <?= $form->field($model, 'desiredDistance')->textInput(['type' => 'number', 'value' => $profileInfo->desired_distance]) ?>
+
+    <div class="form-group">
+        <?= Html::submitButton('Save', ['class' => 'btn btn-success']) ?>
+    </div>
+
+    <?php ActiveForm::end(); ?>
+
 </div>

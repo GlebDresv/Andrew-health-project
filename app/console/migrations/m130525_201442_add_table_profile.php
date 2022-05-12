@@ -3,16 +3,16 @@
 use yii\db\Migration;
 
 /**
- * Class m130524_201442_addtable_public
+ * Class m130524_201442_add_table_profile
  */
-class m130525_201442_add_table_public extends Migration
+class m130525_201442_add_table_profile extends Migration
 {
     /**
      * {@inheritdoc}
      */
     public function up()
     {
-        $this->createTable('public_info', [
+        $this->createTable('profile_info', [
             'userid' => $this->primaryKey(),
             'phone_number' => $this->integer(),
             'full_name' => $this->string()->notNull()->defaultValue(''),
@@ -26,7 +26,7 @@ class m130525_201442_add_table_public extends Migration
             'desired_distance' => $this->integer()->unsigned()->defaultValue(0),
             'recommended_distance' => $this->integer()->unsigned()->defaultValue(0),
         ]);
-        $this->addForeignKey('user_id', 'public_info', 'userid', 'user', 'id', 'CASCADE', 'CASCADE');
+        $this->addForeignKey('user_id', 'profile_info', 'userid', 'user', 'id', 'CASCADE', 'CASCADE');
     }
 
     /**
@@ -34,7 +34,7 @@ class m130525_201442_add_table_public extends Migration
      */
     public function down()
     {
-        $this->dropForeignKey('user_id', 'public_info');
-        $this->dropTable('public_info');
+        $this->dropForeignKey('user_id', 'profile_info');
+        $this->dropTable('profile_info');
     }
 }

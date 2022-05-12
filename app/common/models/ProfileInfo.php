@@ -24,14 +24,14 @@ use common\models\User;
  *
  * @property User $user
  */
-class PublicInfo extends \yii\db\ActiveRecord
+class ProfileInfo extends \yii\db\ActiveRecord
 {
     /**
      * {@inheritdoc}
      */
     public static function tableName()
     {
-        return 'public_info';
+        return 'profile_info';
     }
 
     /**
