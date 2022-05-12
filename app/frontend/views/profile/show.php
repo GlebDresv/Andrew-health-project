@@ -7,18 +7,27 @@ use yii\helpers\Html;
 /**
  *
  * @var yii\web\View $this
- * @var User $userInfo
+ * @var User $user
  * @var ProfileInfo $profileInfo
  */
 
 
 $this->title = 'ShowProfile';
 ?>
-<div class="profile-show">
+<div class="profile-index">
     <h1><?= Html::encode($this->title) ?></h1>
     <img src="<?= $profileInfo->image ?>" width="220px" height="200px" border-radius="50%" alt="">
-    <p><b><?= $userInfo->username . ' (' . $profileInfo->full_name . ')' ?></b>
-        <br><?= $userInfo->email ?><br>
+    <p>
+        <b>
+            <?php
+            if ($profileInfo->full_name) {
+                $full_name = $user->username . ' (' . $profileInfo->full_name . ')';
+            } else {
+                $full_name = $user->username;
+            }
+            echo $full_name ?>
+        </b><br>
+        <?= $user->email ?><br>
         <?= $profileInfo->phone_number ?></p>
     <p><?= $profileInfo->about ?></p>
     Distance:

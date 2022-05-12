@@ -78,9 +78,9 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        $user = ProfileInfo::find()->orderBy('distance_all')->limit(100);
+        $profileInfo = ProfileInfo::find()->orderBy(['distance_all'=>SORT_DESC])->limit(100);
         $dataProvider = new ActiveDataProvider([
-            'query' => $user,
+            'query' => $profileInfo,
             'sort' => [
                 'attributes' => ['distance_day', 'distance_week', 'distance_all'],
             ],
@@ -91,7 +91,7 @@ class SiteController extends Controller
 
         return $this->render('index', [
             'dataProvider' => $dataProvider,
-
+            'profileInfo' => $profileInfo,
         ]);
     }
 
