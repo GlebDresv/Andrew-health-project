@@ -24,7 +24,7 @@ use yii\web\IdentityInterface;
  * @property integer $updated_at
  * @property string $password write-only password
  *
- * @property User $publicInfo
+ * @property User $profileInfo
  */
 class User extends ActiveRecord implements IdentityInterface
 {
@@ -213,7 +213,7 @@ class User extends ActiveRecord implements IdentityInterface
     {
         $this->password_reset_token = null;
     }
-    public function getPublicInfo()
+    public function getProfileInfo()
     {
         return $this->hasOne(ProfileInfo::class, ['userid' => 'id']);
     }

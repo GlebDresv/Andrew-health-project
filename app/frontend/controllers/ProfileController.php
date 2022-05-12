@@ -9,11 +9,7 @@ use yii\web\NotFoundHttpException;
 
 class ProfileController extends Controller
 {
-    /**
-     * Displays index page.
-     *
-     * @return mixed
-     */
+
     public function actionIndex()
     {
         /**
@@ -27,26 +23,24 @@ class ProfileController extends Controller
         ]);
     }
 
-
-    /**
-     * Displays show page.
-     *
-     * @return mixed
-     */
     public function actionShow($id)
     {
         /**
          * @var $user User;
          */
         $user = User::findOne(['id' => $id]);
-        if ($user) {
-            $profileInfo = $user->publicInfo;
-            return $this->render('show', [
-                'user' => $user,
-                'profileInfo' => $profileInfo,
-            ]);
-        } else {
+        if (!$user) {
             throw new NotFoundHttpException();
         }
+
+        $profileInfo = $user->profileInfo;
+        if (!$profileInfo) {
+            throw new NotFoundHttpException();
+        }
+
+        return $this->render('show', [
+            'user' => $user,
+            'profileInfo' => $profileInfo,
+        ]);
     }
 }
