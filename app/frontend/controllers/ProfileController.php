@@ -3,7 +3,6 @@
 namespace frontend\controllers;
 
 use common\models\User;
-use frontend\models\ProfileForm;
 use Yii;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
@@ -41,7 +40,6 @@ class ProfileController extends Controller
          */
         $userInfo = User::findOne(['id' => $id]);
         if ($userInfo != null) {
-
             $profileInfo = $userInfo->publicInfo;
             return $this->render('show', [
                 'userInfo' => $userInfo,
