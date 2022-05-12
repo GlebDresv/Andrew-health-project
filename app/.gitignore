@@ -43,4 +43,3 @@ phpunit.phar
 /backend/web/robots.txt
 /docker/mysql/db/*
 /test
-/docker/mysql/db
