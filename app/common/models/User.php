@@ -2,7 +2,7 @@
 
 namespace common\models;
 
-use common\models\PublicInfo;
+use common\models\ProfileInfo;
 use Yii;
 use yii\base\NotSupportedException;
 use yii\behaviors\TimestampBehavior;
@@ -215,6 +215,6 @@ class User extends ActiveRecord implements IdentityInterface
     }
     public function getPublicInfo()
     {
-        return $this->hasOne(PublicInfo::class, ['userid' => 'id']);
+        return $this->hasOne(ProfileInfo::class, ['userid' => 'id']);
     }
 }

@@ -2,7 +2,7 @@
 
 namespace frontend\controllers;
 
-use common\models\PublicInfo;
+use common\models\ProfileInfo;
 use common\models\User;
 use frontend\models\ResendVerificationEmailForm;
 use frontend\models\VerifyEmailForm;
@@ -78,7 +78,7 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        $user = PublicInfo::find()->orderBy('distance_all')->limit(100);
+        $user = ProfileInfo::find()->orderBy('distance_all')->limit(100);
         $dataProvider = new ActiveDataProvider([
             'query' => $user,
             'sort' => [

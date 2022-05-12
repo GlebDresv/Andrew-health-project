@@ -1,31 +1,31 @@
 <?php
 
-use common\models\PublicInfo;
+use common\models\ProfileInfo;
 use common\models\User;
 use yii\helpers\Html;
 
 /**
  *
  * @var yii\web\View $this
- * @var User $personalInfo
- * @var PublicInfo $publicInfo
+ * @var User $userInfo
+ * @var ProfileInfo $profileInfo
  */
 
 
-$this->title = 'Show';
+$this->title = 'ShowProfile';
 ?>
-<div class="site-profile">
+<div class="profile-show">
     <h1><?= Html::encode($this->title) ?></h1>
-    <img src="<?= $publicInfo->image ?>" width="220px" height="200px" border-radius="50%" alt="">
-    <p><b><?= $personalInfo->username . ' (' . $publicInfo->full_name . ')' ?></b>
-        <br><?= $personalInfo->email ?><br>
-        <?= $publicInfo->phone_number ?></p>
-    <p><?= $publicInfo->about ?></p>
+    <img src="<?= $profileInfo->image ?>" width="220px" height="200px" border-radius="50%" alt="">
+    <p><b><?= $userInfo->username . ' (' . $profileInfo->full_name . ')' ?></b>
+        <br><?= $userInfo->email ?><br>
+        <?= $profileInfo->phone_number ?></p>
+    <p><?= $profileInfo->about ?></p>
     Distance:
     <ul>
-        <li>Today: <?= $publicInfo->distance_day ?></li>
-        <li>Week: <?= $publicInfo->distance_week ?></li>
-        <li>All: <?= $publicInfo->distance_all ?></li>
+        <li>Today: <?= $profileInfo->distance_day ?></li>
+        <li>Week: <?= $profileInfo->distance_week ?></li>
+        <li>All: <?= $profileInfo->distance_all ?></li>
     </ul>
-    <p>desired: <?= $publicInfo->desired_distance ?> | recommended: <?= $publicInfo->recommended_distance ?></p>
+    <p>desired: <?= $profileInfo->desired_distance ?> | recommended: <?= $profileInfo->recommended_distance ?></p>
 </div>
