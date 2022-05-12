@@ -36,12 +36,12 @@ class ProfileController extends Controller
      */
     public function actionShow($id)
     {
-        $res = User::findOne(['id' => $id]);
-        if ($res != null) {
-            /**
-             * @var $userInfo User;
-             */
-            $userInfo = User::findOne(['id' => $id]);
+        /**
+         * @var $userInfo User;
+         */
+        $userInfo = User::findOne(['id' => $id]);
+        if ($userInfo != null) {
+
             $profileInfo = $userInfo->publicInfo;
             return $this->render('show', [
                 'userInfo' => $userInfo,
