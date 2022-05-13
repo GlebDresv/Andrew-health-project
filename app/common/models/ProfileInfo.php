@@ -2,14 +2,12 @@
 
 namespace common\models;
 
-use Yii;
-use common\models\User;
+use yii\db\ActiveRecord;
+
 /**
- * This is the model class for table "user_auth".
+ * This is the model class for table "profile_info".
  *
  * @property int $userid
- * @property string $username
- * @property string $email
  * @property int $phone_number
  * @property string $full_name
  * @property string $about
@@ -24,7 +22,7 @@ use common\models\User;
  *
  * @property User $user
  */
-class ProfileInfo extends \yii\db\ActiveRecord
+class ProfileInfo extends ActiveRecord
 {
     /**
      * {@inheritdoc}
@@ -40,11 +38,9 @@ class ProfileInfo extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['username', 'email', 'phone_number', 'full_name', 'about', 'height', 'age', 'distance_day', 'distance_week', 'distance_all', 'desired_distance', 'recommended_distance'], 'required'],
+            [['phone_number', 'full_name', 'about', 'height', 'age', 'distance_day', 'distance_week', 'distance_all', 'desired_distance', 'recommended_distance'], 'required'],
             [['phone_number', 'height', 'age', 'distance_day', 'distance_week', 'distance_all', 'desired_distance', 'recommended_distance'], 'integer'],
-            [['username', 'email', 'full_name', 'about', 'image'], 'string', 'max' => 255],
-            [['username'], 'unique'],
-            [['email'], 'unique'],
+            [['full_name', 'about', 'image'], 'string', 'max' => 255],
             [['userid'], 'exist', 'skipOnError' => true, 'targetClass' => User::class, 'targetAttribute' => ['userid' => 'id']],
         ];
     }
@@ -60,8 +56,6 @@ class ProfileInfo extends \yii\db\ActiveRecord
     {
         return [
             'userid' => 'Userid',
-            'username' => 'Username',
-            'email' => 'Email',
             'phone_number' => 'Phone Number',
             'full_name' => 'Full Name',
             'about' => 'About',
