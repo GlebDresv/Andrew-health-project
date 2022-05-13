@@ -23,8 +23,11 @@
     "yiisoft/yii2": "~2.0.14",
     "yiisoft/yii2-bootstrap4": "~2.0.0",
     "yiisoft/yii2-swiftmailer": "~2.0.0 || ~2.1.0",
+    "budyaga/yii2-cropper": "*",
+    "bilginnet/yii2-cropper": "dev-master",
     "almasaeed2010/adminlte": "^3.0.2",
-    "ext-mysqli": "*"
+    "ext-mysqli": "*",
+    "ext-json": "*"
   },
   "require-dev": {
     "yiisoft/yii2-debug": "~2.1.0",
