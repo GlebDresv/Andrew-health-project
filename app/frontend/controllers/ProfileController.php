@@ -7,6 +7,7 @@ use common\models\User;
 use Yii;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
+use yii\web\UploadedFile;
 
 class ProfileController extends Controller
 {
@@ -25,10 +26,16 @@ class ProfileController extends Controller
             $profileInfo = new ProfileInfo;
         }
 
-        if ($profileInfo->load(Yii::$app->request->post()) && $profileInfo->validate()) {
-            $profileInfo->userid=$user->id;
-            $profileInfo->save();
-           $view = 'show';
+        if ($profileInfo->load(Yii::$app->request->post())) {
+            $profileInfo->file = UploadedFile::getInstance($profileInfo, 'file');
+
+            if($profileInfo->validate()) {
+                $profileInfo->userid = $user->id;
+                $profileInfo->file->saveAs(Yii::getAlias("@webroot") . '/img/' . $profileInfo->userid. '_avatar' . '.' . $profileInfo->file->extension);
+                $profileInfo->image = Yii::$app->request->baseUrl .'/img/' . $profileInfo->userid. '_avatar' . '.' . $profileInfo->file->extension;
+                $profileInfo->save();
+                $view = 'show';
+            }
         }
 
         return $this->render($view, [

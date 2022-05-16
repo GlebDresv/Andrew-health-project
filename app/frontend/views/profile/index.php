@@ -18,7 +18,9 @@ $this->title = 'Profile';
 <div class="profile-index">
     <h1><?= Html::encode($this->title) ?></h1>
     <img src="<?= $profileInfo->image ?>" width="220px" height="200px" border-radius="50%" alt="">
-    <?php $form = ActiveForm::begin(); ?>
+    <?php $form = ActiveForm::begin(['options' => ['enctype' => 'multipart/form-data']]); ?>
+
+    <?= $form->field($profileInfo, 'file')->fileInput() ?>
 
     <?= $form->field($profileInfo, 'full_name')->textInput(['value' => $profileInfo->full_name]) ?>
 

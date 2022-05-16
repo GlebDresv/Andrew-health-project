@@ -20,6 +20,7 @@ use yii\db\ActiveRecord;
  * @property int $desired_distance
  * @property int $recommended_distance
  *
+ *
  * @property User $user
  */
 class ProfileInfo extends ActiveRecord
@@ -27,6 +28,8 @@ class ProfileInfo extends ActiveRecord
     /**
      * {@inheritdoc}
      */
+    public $file;
+
     public static function tableName()
     {
         return 'profile_info';
@@ -42,6 +45,7 @@ class ProfileInfo extends ActiveRecord
             [['phone_number', 'height', 'age', 'distance_day', 'distance_week', 'distance_all', 'desired_distance', 'recommended_distance'], 'integer'],
             [['full_name', 'about', 'image'], 'string', 'max' => 255],
             [['userid'], 'exist', 'skipOnError' => true, 'targetClass' => User::class, 'targetAttribute' => ['userid' => 'id']],
+            [['file'], 'file',  'skipOnEmpty' => false, 'checkExtensionByMimeType' => false, 'extensions' => 'gif, jpg, png'],
         ];
     }
     public function  __get($name)
