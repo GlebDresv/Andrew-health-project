@@ -38,7 +38,7 @@ class ProfileInfo extends ActiveRecord
     public function rules()
     {
         return [
-            [['phone_number', 'full_name', 'about', 'height', 'age', 'distance_day', 'distance_week', 'distance_all', 'desired_distance', 'recommended_distance'], 'required'],
+            [['phone_number', 'full_name', 'about', 'height', 'age', 'desired_distance'], 'required'],
             [['phone_number', 'height', 'age', 'distance_day', 'distance_week', 'distance_all', 'desired_distance', 'recommended_distance'], 'integer'],
             [['full_name', 'about', 'image'], 'string', 'max' => 255],
             [['userid'], 'exist', 'skipOnError' => true, 'targetClass' => User::class, 'targetAttribute' => ['userid' => 'id']],
