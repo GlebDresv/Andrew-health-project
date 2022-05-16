@@ -29,10 +29,10 @@ class ProfileController extends Controller
         if ($profileInfo->load(Yii::$app->request->post())) {
             $profileInfo->file = UploadedFile::getInstance($profileInfo, 'file');
 
-            if($profileInfo->validate()) {
+            if ($profileInfo->validate()) {
                 $profileInfo->userid = $user->id;
-                $profileInfo->file->saveAs(Yii::getAlias("@webroot") . '/img/' . $profileInfo->userid. '_avatar' . '.' . $profileInfo->file->extension);
-                $profileInfo->image = Yii::$app->request->baseUrl .'/img/' . $profileInfo->userid. '_avatar' . '.' . $profileInfo->file->extension;
+                $profileInfo->file->saveAs(Yii::getAlias("@webroot") . '/img/' . $profileInfo->userid . '_avatar' . '.' . $profileInfo->file->extension);
+                $profileInfo->image = Yii::$app->request->baseUrl . '/img/' . $profileInfo->userid . '_avatar' . '.' . $profileInfo->file->extension;
                 $profileInfo->save();
                 $view = 'show';
             }

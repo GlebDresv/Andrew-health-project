@@ -3,8 +3,20 @@
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/almasaeed2010/adminlte" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/imagine/imagine" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/budyaga/yii2-cropper" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/bower-asset/jcrop" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/bower-asset/simple-ajax-uploader" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/yiisoft/yii2-imagine" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/bower-asset/bootstrap" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/yiisoft/yii2-bootstrap" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/bilginnet/yii2-cropper" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="bootstrap" level="application" />
+    <orderEntry type="library" name="jquery" level="application" />
+    <orderEntry type="library" name="dropzone" level="application" />
+    <orderEntry type="library" name="cropperjs" level="application" />
   </component>
 </module>

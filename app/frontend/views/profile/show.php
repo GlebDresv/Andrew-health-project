@@ -16,7 +16,7 @@ $this->title = 'Show_Profile';
 ?>
 <div class="profile-show">
     <h1><?= Html::encode($this->title) ?></h1>
-    <img src="<?= $profileInfo->image ?>" width="220px" height="200px" border-radius="50%" alt="">
+    <img src="<?= $profileInfo->image ?>" width="256px" height="256px" alt="">
     <p>
         <b>
             <?php

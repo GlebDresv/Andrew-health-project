@@ -88,6 +88,14 @@
       <path value="$PROJECT_DIR$/app/vendor/bower-asset/yii2-pjax" />
       <path value="$PROJECT_DIR$/app/vendor/codeception/codeception" />
       <path value="$PROJECT_DIR$/app/vendor/almasaeed2010/adminlte" />
+      <path value="$PROJECT_DIR$/app/vendor/imagine/imagine" />
+      <path value="$PROJECT_DIR$/app/vendor/budyaga/yii2-cropper" />
+      <path value="$PROJECT_DIR$/app/vendor/bower-asset/jcrop" />
+      <path value="$PROJECT_DIR$/app/vendor/bower-asset/simple-ajax-uploader" />
+      <path value="$PROJECT_DIR$/app/vendor/yiisoft/yii2-imagine" />
+      <path value="$PROJECT_DIR$/app/vendor/bower-asset/bootstrap" />
+      <path value="$PROJECT_DIR$/app/vendor/yiisoft/yii2-bootstrap" />
+      <path value="$PROJECT_DIR$/app/vendor/bilginnet/yii2-cropper" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.4">
