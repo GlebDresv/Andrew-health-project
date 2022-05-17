@@ -11,6 +11,7 @@
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/bower-asset/bootstrap" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/yiisoft/yii2-bootstrap" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/bilginnet/yii2-cropper" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/developit/yii2-jcrop" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
@@ -18,5 +19,6 @@
     <orderEntry type="library" name="jquery" level="application" />
     <orderEntry type="library" name="dropzone" level="application" />
     <orderEntry type="library" name="cropperjs" level="application" />
+    <orderEntry type="library" name="jquery-3.5.1" level="application" />
   </component>
 </module>

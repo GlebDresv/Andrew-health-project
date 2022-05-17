@@ -96,6 +96,7 @@
       <path value="$PROJECT_DIR$/app/vendor/bower-asset/bootstrap" />
       <path value="$PROJECT_DIR$/app/vendor/yiisoft/yii2-bootstrap" />
       <path value="$PROJECT_DIR$/app/vendor/bilginnet/yii2-cropper" />
+      <path value="$PROJECT_DIR$/app/vendor/developit/yii2-jcrop" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.4">
