@@ -136,7 +136,7 @@ $this->title = 'Profile';
             reader.readAsDataURL(blob);
             reader.onloadend = function () {
                 var base64data = reader.result;
-
+                // error here
                 $.ajax({
                     type: "POST",
                     dataType: "json",
