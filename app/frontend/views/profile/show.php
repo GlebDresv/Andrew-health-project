@@ -11,7 +11,6 @@ use yii\helpers\Html;
  * @var ProfileInfo $profileInfo
  */
 
-
 $this->title = 'Show_Profile';
 ?>
 <div class="profile-show">
