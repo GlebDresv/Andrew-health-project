@@ -2,10 +2,10 @@
 
 namespace frontend\controllers;
 
-use budyaga\cropper\Widget;
 use common\models\ProfileInfo;
 use common\models\User;
 use Yii;
+use yii\helpers\Url;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\web\UploadedFile;
@@ -28,18 +28,16 @@ class ProfileController extends Controller
         }
 
 
-        if(Yii::$app->request->isPost){
+        if (Yii::$app->request->isPost) {
             if ($profileInfo->load(Yii::$app->request->post())) {
-                var_dump($_FILES);
-                exit;
                 $profileInfo->file = UploadedFile::getInstance($profileInfo, 'file');
 
                 if ($profileInfo->validate()) {
 
-                    $profileInfo->file->saveAs(Yii::getAlias("@webroot") . '/img/' . $user->username . '_avatar.png' );
+                    $profileInfo->file->saveAs(Yii::getAlias("@webroot") . '/img/' . $user->username . '_avatar.png');
                     $profileInfo->image = Yii::$app->request->baseUrl . '/img/' . $user->username . '_avatar.png';
                     $profileInfo->save();
-                    $view = 'show';
+                    $this->redirect(Url::to('/profile/' . $user->id));
                 }
             }
         }
@@ -53,6 +51,7 @@ class ProfileController extends Controller
 
     public function actionShow(int $id)
     {
+
         /**
          * @var $user User;
          */

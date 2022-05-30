@@ -13,7 +13,6 @@ use yii\widgets\ActiveForm;
  * @var ProfileInfo $profileInfo
  */
 
-
 $this->title = 'Profile';
 ?>
 <h1><?= Html::encode($this->title) ?></h1>
@@ -71,7 +70,6 @@ $this->title = 'Profile';
         </div>
     </div>
 
-
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script src='<?= Url::to('../cropperJs/cropper.js') ?>' type="text/javascript"></script>
@@ -106,16 +104,8 @@ $this->title = 'Profile';
 
             if (files && files.length > 0) {
                 file = files[0];
-
-                if (URL) {
-                    done(URL.createObjectURL(file));
-                } else if (FileReader) {
-                    reader = new FileReader();
-                    reader.onload = function (event) {
-                        done(reader.result);
-                    };
-                    reader.readAsDataURL(file);
-                }
+                //URL == document.URL
+                done(URL.createObjectURL(file));
             }
         });
 
@@ -132,8 +122,8 @@ $this->title = 'Profile';
 
         $("#crop").click(function () {
             let canvas = cropper.getCroppedCanvas({
-                width: 256,
-                height: 256,
+                width: 128,
+                height: 128,
             });
 
             canvas.toBlob(function (blob) {
@@ -141,7 +131,6 @@ $this->title = 'Profile';
                 reader.onload = function () {
                     newImage = reader.result;
                     bs_modal.modal('hide');
-
                 };
                 reader.readAsDataURL(blob);
             });
@@ -149,7 +138,6 @@ $this->title = 'Profile';
 
 
     </script>
-
 
     <?php $form = ActiveForm::begin(['options' => ['enctype' => 'multipart/form-data']]); ?>
 
@@ -175,14 +163,14 @@ $this->title = 'Profile';
 
     <script>
         window.addEventListener("load", function () {
-            const form = document.querySelector("form#w0");
-
-            console.log('страница загрузилась');
-
-            $('#w0').submit(function(event) {
-                console.log('Submit event');
+            $('#w0').on('beforeSubmit', function (event) {
+                console.log('submit event')
                 event.preventDefault();
+                event.stopImmediatePropagation();
+                sendData();
+                return false;
             });
+
             function sendData() {
                 image = dataURItoBlob(newImage);
 
@@ -190,18 +178,12 @@ $this->title = 'Profile';
 
                 const formData = new FormData(document.querySelector('form#w0'));
                 formData.set('ProfileInfo[file]', image);
-                XHR.addEventListener("load", function (event) {
-
-
-                });
-
-                XHR.addEventListener("error", function (event) {
-                    alert('Oops! Something went wrong.');
-                });
-
-                XHR.open("POST", '<?= Url::to('/profile/index') ?>');
-
+                XHR.open('post', '<?= Url::to('/profile/index') ?>');
+                XHR.onload = function () {
+                    console.log(XHR.responseText);
+                }
                 XHR.send(formData);
+                window.location.href = '<?= Url::to('/profile/index') ?>';
             }
 
 
