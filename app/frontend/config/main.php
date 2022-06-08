@@ -53,6 +53,7 @@ return [
                 '' => 'site/index',
                 '<action>' => 'site/<action>',
                 'profile/<id:\d+>' => 'profile/show',
+                'news/<id:\d+>' => 'news/show',
             ],
         ],
     ],

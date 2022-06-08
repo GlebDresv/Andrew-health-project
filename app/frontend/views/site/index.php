@@ -19,6 +19,7 @@ $this->title = 'My Yii Application';
         Some text
     </div>
 
+    <?php if(isset($dataProvider)){ ?>
     <div class="body-content">
         <?= GridView::widget([
             'dataProvider' => $dataProvider,
@@ -37,4 +38,5 @@ $this->title = 'My Yii Application';
         ])
         ?>
     </div>
+    <?php } ?>
 </div>
