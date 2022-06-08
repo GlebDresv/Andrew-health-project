@@ -17,6 +17,9 @@ use yii\web\View;
         <li class="nav-item d-none d-sm-inline-block">
             <a href="/" class="nav-link">Main</a>
         </li>
+        <li class="nav-item d-none d-sm-inline-block">
+            <a href="<?= Url::to(['/news']); ?>" class="nav-link">News</a>
+        </li>
     </ul>
 
     <!-- SEARCH FORM -->
@@ -36,8 +39,6 @@ use yii\web\View;
         <!-- Messages Dropdown Menu -->
         <li class="nav-item dropdown user-menu">
             <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
-                <img src="<?= $directoryAsset ?>/img/user2-160x160.jpg" class="user-image img-circle elevation-2"
-                     alt="User Image">
                 <span class="d-none d-md-inline"><?= \Yii::$app->user->identity->username ?></span>
             </a>
 
