@@ -1,6 +1,5 @@
 <?php
 
-use common\models\ProfileInfo;
 use yii\data\ActiveDataProvider;
 use yii\grid\GridView;
 use yii\helpers\Html;
