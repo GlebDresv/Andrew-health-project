@@ -9,7 +9,7 @@ use yii\widgets\ActiveForm;
 /**
  *
  * @var yii\web\View $this
- * @var User $userInfo
+ * @var User $user
  * @var ProfileInfo $profileInfo
  */
 
@@ -122,8 +122,8 @@ $this->title = 'Profile';
 
         $("#crop").click(function () {
             let canvas = cropper.getCroppedCanvas({
-                width: 128,
-                height: 128,
+                width: 512,
+                height: 512,
             });
 
             canvas.toBlob(function (blob) {
@@ -141,7 +141,7 @@ $this->title = 'Profile';
 
     <?php $form = ActiveForm::begin(['options' => ['enctype' => 'multipart/form-data']]); ?>
 
-    <?= $form->field($profileInfo, 'file')->fileInput(['class' => 'image', 'accept' => 'image/*']) ?>
+    <?= $form->field($profileInfo, 'file')->fileInput(['class' => 'image']) ?>
 
     <?= $form->field($profileInfo, 'full_name')->textInput(['value' => $profileInfo->full_name]) ?>
 
@@ -164,7 +164,6 @@ $this->title = 'Profile';
     <script>
         window.addEventListener("load", function () {
             $('#w0').on('beforeSubmit', function (event) {
-                console.log('submit event')
                 event.preventDefault();
                 event.stopImmediatePropagation();
                 sendData();
@@ -178,12 +177,16 @@ $this->title = 'Profile';
 
                 const formData = new FormData(document.querySelector('form#w0'));
                 formData.set('ProfileInfo[file]', image);
+
                 XHR.open('post', '<?= Url::to('/profile/index') ?>');
-                XHR.onload = function () {
-                    console.log(XHR.responseText);
-                }
+
                 XHR.send(formData);
-                window.location.href = '<?= Url::to('/profile/index') ?>';
+
+                XHR.onloadend = function () {
+                    if(XHR.readyState === XMLHttpRequest.DONE && XHR.status === 200) {
+                        window.location = '<?= Url::to('/profile/'. $user->id) ?>';
+                    }
+                };
             }
 
 

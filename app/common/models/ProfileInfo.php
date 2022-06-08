@@ -46,7 +46,7 @@ class ProfileInfo extends ActiveRecord
             [['phone_number', 'height', 'age', 'distance_day', 'distance_week', 'distance_all', 'desired_distance', 'recommended_distance'], 'integer'],
             [['full_name', 'about', 'image'], 'string', 'max' => 255],
             [['userid'], 'exist', 'skipOnError' => true, 'targetClass' => User::class, 'targetAttribute' => ['userid' => 'id']],
-            [['file'], 'file', 'skipOnEmpty' => false, 'checkExtensionByMimeType' => false, 'extensions' => 'gif, jpg, jpeg, png'],
+            [['file'], 'file', 'skipOnEmpty' => false],
         ];
     }
 

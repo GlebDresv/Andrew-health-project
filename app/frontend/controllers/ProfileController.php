@@ -5,6 +5,7 @@ namespace frontend\controllers;
 use common\models\ProfileInfo;
 use common\models\User;
 use Yii;
+use yii\helpers\Json;
 use yii\helpers\Url;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
@@ -27,7 +28,6 @@ class ProfileController extends Controller
             $profileInfo = new ProfileInfo;
         }
 
-
         if (Yii::$app->request->isPost) {
             if ($profileInfo->load(Yii::$app->request->post())) {
                 $profileInfo->file = UploadedFile::getInstance($profileInfo, 'file');
@@ -37,7 +37,6 @@ class ProfileController extends Controller
                     $profileInfo->file->saveAs(Yii::getAlias("@webroot") . '/img/' . $user->username . '_avatar.png');
                     $profileInfo->image = Yii::$app->request->baseUrl . '/img/' . $user->username . '_avatar.png';
                     $profileInfo->save();
-                    $this->redirect(Url::to('/profile/' . $user->id));
                 }
             }
         }
