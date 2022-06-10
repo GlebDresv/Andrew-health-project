@@ -217,4 +217,9 @@ class User extends ActiveRecord implements IdentityInterface
     {
         return $this->hasOne(ProfileInfo::class, ['userid' => 'id']);
     }
+
+    public function getLocation()
+    {
+        return $this->hasOne(Location::class, ['user_id' => 'id']);
+    }
 }
