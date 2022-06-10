@@ -27,7 +27,7 @@ class LocationController extends Controller
     public function actionIndex()
     {
         $user = yii::$app->user->identity;
-        $location = Location::find()->orderBy(['time' => SORT_DESC]);
+        $location = Location::find()->where('user_id' == yii::$app->user->id)->orderBy(['time' => SORT_DESC]);
         $dataProvider = new ActiveDataProvider([
             'query' => $location,
             'pagination' => [
