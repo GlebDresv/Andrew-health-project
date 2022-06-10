@@ -16,8 +16,8 @@ class m130525_201442_create_table_location extends Migration
             'user_id' => $this->integer(),
             'location_id' => $this->primaryKey(),
             'time' => $this->dateTime(),
-            'longitude' => $this->decimal(),
-            'latitude' => $this->decimal(),
+            'longitude' => $this->decimal(7,4),
+            'latitude' => $this->decimal(7,4),
         ]);
         $this->addForeignKey('user_loc-id', 'location', 'user_id', 'user', 'id', 'CASCADE', 'CASCADE');
     }
