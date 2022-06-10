@@ -1,4 +1,7 @@
 <?php
+
+use yii\web\JsonParser;
+
 $params = array_merge(
     require __DIR__ . '/../../common/config/params.php',
     require __DIR__ . '/../../common/config/params-local.php',
@@ -13,6 +16,9 @@ return [
     'controllerNamespace' => 'frontend\controllers',
     'components' => [
         'request' => [
+            'parsers' => [
+                'application/json' => JsonParser::class,
+                ],
             'cookieValidationKey' => '36617971150091636078',
             'csrfParam' => '_csrf-frontend',
         ],
