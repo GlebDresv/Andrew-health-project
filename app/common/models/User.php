@@ -220,6 +220,6 @@ class User extends ActiveRecord implements IdentityInterface
 
     public function getLocation()
     {
-        return $this->hasOne(Location::class, ['user_id' => 'id']);
+        return $this->hasMany(Location::class, ['user_id' => 'id']);
     }
 }
