@@ -1,9 +1,23 @@
 <?php
-/* @var $this yii\web\View */
+/**
+ * @var yii\web\View $this
+ * @var ActiveDataProvider $dataProvider
+ */
+
+use yii\data\ActiveDataProvider;
+use yii\grid\GridView;
+
 ?>
 <h1>location/index</h1>
 
-<p>
-    You may change the content of this page by modifying
-    the file <code><?= __FILE__; ?></code>.
-</p>
+<div class="body-content">
+    <?= GridView::widget([
+        'dataProvider' => $dataProvider,
+        'columns' => [
+            'time',
+            'longitude',
+            'latitude',
+        ]
+    ])
+    ?>
+</div>
