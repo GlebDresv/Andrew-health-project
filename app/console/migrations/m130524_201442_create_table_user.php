@@ -2,7 +2,7 @@
 
 use yii\db\Migration;
 
-class m130524_201442_init extends Migration
+class m130524_201442_create_table_user extends Migration
 {
     public function up()
     {
