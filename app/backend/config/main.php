@@ -45,7 +45,6 @@ return [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
-                'members' => '/site/members'
             ],
         ],
     ],
