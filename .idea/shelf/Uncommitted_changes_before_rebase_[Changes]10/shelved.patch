@@ -1,0 +1,18 @@
+Index: app/backend/config/main.php
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?php\n$params = array_merge(\n    require __DIR__ . '/../../common/config/params.php',\n    require __DIR__ . '/../../common/config/params-local.php',\n    require __DIR__ . '/params.php',\n    require __DIR__ . '/params-local.php'\n);\n\nreturn [\n    'id' => 'app-backend',\n    'basePath' => dirname(__DIR__),\n    'controllerNamespace' => 'backend\\controllers',\n    'bootstrap' => ['log'],\n    'modules' => [],\n    'components' => [\n        'request' => [\n            'cookieValidationKey' => '10498893638677325685',\n            'csrfParam' => '_csrf-backend',\n        ],\n        'user' => [\n            'identityClass' => 'common\\models\\Admin',\n            'enableAutoLogin' => true,\n            'identityCookie' => ['name' => '_backendUser', // unique for backend\n                'httpOnly' => true],\n        ],\n        'session' => [\n            // this is the name of the session cookie used for login on the backend\n            'name' => 'advanced-backend',\n            'savePath' => sys_get_temp_dir(),\n        ],\n        'log' => [\n            'traceLevel' => YII_DEBUG ? 3 : 0,\n            'targets' => [\n                [\n                    'class' => 'yii\\log\\FileTarget',\n                    'levels' => ['error', 'warning'],\n                ],\n            ],\n        ],\n        'errorHandler' => [\n            'errorAction' => 'site/error',\n        ],\n\n        'urlManager' => [\n            'enablePrettyUrl' => true,\n            'showScriptName' => false,\n            'rules' => [\n                'members' => '/site/members'\n            ],\n        ],\n    ],\n    'params' => $params,\n];\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/backend/config/main.php b/app/backend/config/main.php
+--- a/app/backend/config/main.php	(revision 27fd900f5a816bd7d8ce83cef37f52e1f3c30cc2)
++++ b/app/backend/config/main.php	(date 1655141360943)
+@@ -45,7 +45,6 @@
+             'enablePrettyUrl' => true,
+             'showScriptName' => false,
+             'rules' => [
+-                'members' => '/site/members'
+             ],
+         ],
+     ],

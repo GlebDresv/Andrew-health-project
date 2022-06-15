@@ -1,0 +1,725 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="e17b67a6-3021-4b3d-ac09-1b7a5dcc28b9" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/app/composer.json</pharConfigPath>
+    <execution>
+      <executable path="composer" />
+    </execution>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="news" />
+        <entry key="$PROJECT_DIR$/app" value="asd" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
+  </component>
+  <component name="GitRewordedCommitMessages">
+    <option name="commitMessagesMapping">
+      <RewordedCommitMessageMapping>
+        <option name="originalMessage" value="deleted .pem files" />
+        <option name="rewordedMessage" value="deleted .pem files,&#10;main-updated restored to default" />
+      </RewordedCommitMessageMapping>
+    </option>
+    <option name="currentCommit" value="1" />
+    <option name="onto" value="be63fff8b8364f0e4ab159a5c13c63b4e9841e7f" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/consoles/db/57a2ca1b-cacd-45ed-af9e-b56196697b35/console.sql" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/consoles/db/57a2ca1b-cacd-45ed-af9e-b56196697b35/console_2.sql" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.dom.d.ts" root0="SKIP_INSPECTION" />
+  </component>
+  <component name="JsBowerSettings">
+    <bower-package value="" />
+    <bower.json value="" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration">
+    <include_path>
+      <path value="$PROJECT_DIR$/app/vendor/codeception/lib-asserts" />
+      <path value="$PROJECT_DIR$/app/vendor/codeception/module-asserts" />
+      <path value="$PROJECT_DIR$/app/vendor/codeception/module-filesystem" />
+      <path value="$PROJECT_DIR$/app/vendor/codeception/lib-innerbrowser" />
+      <path value="$PROJECT_DIR$/app/vendor/codeception/verify" />
+      <path value="$PROJECT_DIR$/app/vendor/codeception/module-yii2" />
+      <path value="$PROJECT_DIR$/app/vendor/codeception/stub" />
+      <path value="$PROJECT_DIR$/app/vendor/codeception/phpunit-wrapper" />
+      <path value="$PROJECT_DIR$/app/vendor/swiftmailer/swiftmailer" />
+      <path value="$PROJECT_DIR$/app/vendor/phpdocumentor/reflection-docblock" />
+      <path value="$PROJECT_DIR$/app/vendor/phpdocumentor/reflection-common" />
+      <path value="$PROJECT_DIR$/app/vendor/phpdocumentor/type-resolver" />
+      <path value="$PROJECT_DIR$/app/vendor/psr/http-factory" />
+      <path value="$PROJECT_DIR$/app/vendor/psr/http-message" />
+      <path value="$PROJECT_DIR$/app/vendor/psr/container" />
+      <path value="$PROJECT_DIR$/app/vendor/psr/event-dispatcher" />
+      <path value="$PROJECT_DIR$/app/vendor/cebe/markdown" />
+      <path value="$PROJECT_DIR$/app/vendor/behat/gherkin" />
+      <path value="$PROJECT_DIR$/app/vendor/ezyang/htmlpurifier" />
+      <path value="$PROJECT_DIR$/app/vendor/egulias/email-validator" />
+      <path value="$PROJECT_DIR$/app/vendor/myclabs/deep-copy" />
+      <path value="$PROJECT_DIR$/app/vendor/phar-io/manifest" />
+      <path value="$PROJECT_DIR$/app/vendor/phar-io/version" />
+      <path value="$PROJECT_DIR$/app/vendor/phpspec/php-diff" />
+      <path value="$PROJECT_DIR$/app/vendor/phpspec/prophecy" />
+      <path value="$PROJECT_DIR$/app/vendor/phpunit/php-file-iterator" />
+      <path value="$PROJECT_DIR$/app/vendor/phpunit/php-token-stream" />
+      <path value="$PROJECT_DIR$/app/vendor/phpunit/php-code-coverage" />
+      <path value="$PROJECT_DIR$/app/vendor/phpunit/php-timer" />
+      <path value="$PROJECT_DIR$/app/vendor/phpunit/phpunit" />
+      <path value="$PROJECT_DIR$/app/vendor/phpunit/php-text-template" />
+      <path value="$PROJECT_DIR$/app/vendor/symfony/dom-crawler" />
+      <path value="$PROJECT_DIR$/app/vendor/symfony/string" />
+      <path value="$PROJECT_DIR$/app/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/app/vendor/symfony/polyfill-intl-grapheme" />
+      <path value="$PROJECT_DIR$/app/vendor/symfony/polyfill-php73" />
+      <path value="$PROJECT_DIR$/app/vendor/symfony/polyfill-php72" />
+      <path value="$PROJECT_DIR$/app/vendor/symfony/console" />
+      <path value="$PROJECT_DIR$/app/vendor/symfony/css-selector" />
+      <path value="$PROJECT_DIR$/app/vendor/symfony/polyfill-iconv" />
+      <path value="$PROJECT_DIR$/app/vendor/symfony/service-contracts" />
+      <path value="$PROJECT_DIR$/app/vendor/symfony/finder" />
+      <path value="$PROJECT_DIR$/app/vendor/symfony/event-dispatcher-contracts" />
+      <path value="$PROJECT_DIR$/app/vendor/symfony/event-dispatcher" />
+      <path value="$PROJECT_DIR$/app/vendor/symfony/polyfill-php80" />
+      <path value="$PROJECT_DIR$/app/vendor/symfony/deprecation-contracts" />
+      <path value="$PROJECT_DIR$/app/vendor/symfony/polyfill-intl-normalizer" />
+      <path value="$PROJECT_DIR$/app/vendor/symfony/polyfill-ctype" />
+      <path value="$PROJECT_DIR$/app/vendor/symfony/browser-kit" />
+      <path value="$PROJECT_DIR$/app/vendor/symfony/yaml" />
+      <path value="$PROJECT_DIR$/app/vendor/symfony/polyfill-intl-idn" />
+      <path value="$PROJECT_DIR$/app/vendor/theseer/tokenizer" />
+      <path value="$PROJECT_DIR$/app/vendor/yiisoft/yii2-debug" />
+      <path value="$PROJECT_DIR$/app/vendor/yiisoft/yii2-gii" />
+      <path value="$PROJECT_DIR$/app/vendor/yiisoft/yii2-faker" />
+      <path value="$PROJECT_DIR$/app/vendor/yiisoft/yii2-composer" />
+      <path value="$PROJECT_DIR$/app/vendor/yiisoft/yii2-swiftmailer" />
+      <path value="$PROJECT_DIR$/app/vendor/yiisoft/yii2-bootstrap4" />
+      <path value="$PROJECT_DIR$/app/vendor/yiisoft/yii2" />
+      <path value="$PROJECT_DIR$/app/vendor/doctrine/lexer" />
+      <path value="$PROJECT_DIR$/app/vendor/composer" />
+      <path value="$PROJECT_DIR$/app/vendor/doctrine/instantiator" />
+      <path value="$PROJECT_DIR$/app/vendor/fakerphp/faker" />
+      <path value="$PROJECT_DIR$/app/vendor/npm-asset/bootstrap" />
+      <path value="$PROJECT_DIR$/app/vendor/paragonie/random_compat" />
+      <path value="$PROJECT_DIR$/app/vendor/ralouphie/getallheaders" />
+      <path value="$PROJECT_DIR$/app/vendor/sebastian/diff" />
+      <path value="$PROJECT_DIR$/app/vendor/sebastian/object-enumerator" />
+      <path value="$PROJECT_DIR$/app/vendor/sebastian/recursion-context" />
+      <path value="$PROJECT_DIR$/app/vendor/sebastian/object-reflector" />
+      <path value="$PROJECT_DIR$/app/vendor/sebastian/environment" />
+      <path value="$PROJECT_DIR$/app/vendor/sebastian/resource-operations" />
+      <path value="$PROJECT_DIR$/app/vendor/sebastian/global-state" />
+      <path value="$PROJECT_DIR$/app/vendor/sebastian/code-unit-reverse-lookup" />
+      <path value="$PROJECT_DIR$/app/vendor/sebastian/type" />
+      <path value="$PROJECT_DIR$/app/vendor/sebastian/version" />
+      <path value="$PROJECT_DIR$/app/vendor/sebastian/comparator" />
+      <path value="$PROJECT_DIR$/app/vendor/sebastian/exporter" />
+      <path value="$PROJECT_DIR$/app/vendor/webmozart/assert" />
+      <path value="$PROJECT_DIR$/app/vendor/guzzlehttp/psr7" />
+      <path value="$PROJECT_DIR$/app/vendor/bower-asset/inputmask" />
+      <path value="$PROJECT_DIR$/app/vendor/bower-asset/punycode" />
+      <path value="$PROJECT_DIR$/app/vendor/bower-asset/jquery" />
+      <path value="$PROJECT_DIR$/app/vendor/bower-asset/yii2-pjax" />
+      <path value="$PROJECT_DIR$/app/vendor/codeception/codeception" />
+      <path value="$PROJECT_DIR$/app/vendor/almasaeed2010/adminlte" />
+      <path value="$PROJECT_DIR$/app/vendor/imagine/imagine" />
+      <path value="$PROJECT_DIR$/app/vendor/budyaga/yii2-cropper" />
+      <path value="$PROJECT_DIR$/app/vendor/bower-asset/jcrop" />
+      <path value="$PROJECT_DIR$/app/vendor/bower-asset/simple-ajax-uploader" />
+      <path value="$PROJECT_DIR$/app/vendor/yiisoft/yii2-imagine" />
+      <path value="$PROJECT_DIR$/app/vendor/bower-asset/bootstrap" />
+      <path value="$PROJECT_DIR$/app/vendor/yiisoft/yii2-bootstrap" />
+      <path value="$PROJECT_DIR$/app/vendor/bilginnet/yii2-cropper" />
+      <path value="$PROJECT_DIR$/app/vendor/developit/yii2-jcrop" />
+    </include_path>
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectId" id="27nJVfst3wNQQ3ajIxunu6v3qg4" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/home/hydra/Programming/Andrew-health-project",
+    "nodejs_package_manager_path": "npm",
+    "php.override.implement.member.chooser.php.doc": "NONE",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "two.files.diff.last.used.folder": "/home/hydra/Programming/Andrew-health-project",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/console/migrations" />
+      <recent name="$PROJECT_DIR$/app/frontend/views/location" />
+      <recent name="$PROJECT_DIR$/app/frontend/views/news" />
+      <recent name="$PROJECT_DIR$/app/test" />
+      <recent name="$PROJECT_DIR$/app/frontend/views/profile" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/.idea" />
+      <recent name="$PROJECT_DIR$/app/common/models" />
+      <recent name="$PROJECT_DIR$/app/backend/models" />
+      <recent name="$PROJECT_DIR$/app/frontend/web" />
+      <recent name="$PROJECT_DIR$/app" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Docker.Unnamed">
+    <configuration name="Unnamed" type="docker-deploy" factoryName="docker-compose.yml" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="envFilePath" value="" />
+          <option name="sourceFilePath" value="docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="php/Dockerfile" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
+      <deployment type="dockerfile">
+        <settings>
+          <option name="sourceFilePath" value="docker/php/Dockerfile" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Docker.php/Dockerfile" />
+        <item itemvalue="Docker.php/Dockerfile" />
+        <item itemvalue="Docker.php/Dockerfile" />
+        <item itemvalue="Docker.php/Dockerfile" />
+        <item itemvalue="Docker.php/Dockerfile" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration>$USER_HOME$/.subversion</configuration>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e17b67a6-3021-4b3d-ac09-1b7a5dcc28b9" name="Changes" comment="" />
+      <created>1649949942902</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1649949942902</updated>
+      <workItem from="1649949944634" duration="745000" />
+      <workItem from="1649950699009" duration="46000" />
+      <workItem from="1649950754405" duration="14665000" />
+      <workItem from="1650021270063" duration="888000" />
+      <workItem from="1650033134807" duration="5531000" />
+      <workItem from="1650038682238" duration="1298000" />
+      <workItem from="1650040095235" duration="778000" />
+      <workItem from="1650040886867" duration="181000" />
+      <workItem from="1650041150227" duration="11905000" />
+      <workItem from="1650294523096" duration="17951000" />
+      <workItem from="1650384271216" duration="14578000" />
+      <workItem from="1650467088339" duration="8531000" />
+      <workItem from="1650550005030" duration="15516000" />
+      <workItem from="1650578126277" duration="5000" />
+      <workItem from="1650636977200" duration="23612000" />
+      <workItem from="1650664827651" duration="22000" />
+      <workItem from="1650903944949" duration="11133000" />
+      <workItem from="1650986138738" duration="9427000" />
+      <workItem from="1651002756922" duration="5250000" />
+      <workItem from="1651070437533" duration="18884000" />
+      <workItem from="1651164203273" duration="311000" />
+      <workItem from="1651170583852" duration="4065000" />
+      <workItem from="1651246831479" duration="2457000" />
+      <workItem from="1651262420545" duration="4000" />
+      <workItem from="1651267698157" duration="4000" />
+      <workItem from="1651506535751" duration="2027000" />
+      <workItem from="1651578385647" duration="792000" />
+      <workItem from="1651589018544" duration="8869000" />
+      <workItem from="1651677187392" duration="14055000" />
+      <workItem from="1651742046924" duration="2000" />
+      <workItem from="1651766904474" duration="10345000" />
+      <workItem from="1651778626521" duration="3000" />
+      <workItem from="1652009839797" duration="9000" />
+      <workItem from="1652110178789" duration="12929000" />
+      <workItem from="1652193938115" duration="21554000" />
+      <workItem from="1652278665542" duration="22867000" />
+      <workItem from="1652350002166" duration="2000" />
+      <workItem from="1652368469193" duration="22898000" />
+      <workItem from="1652415580541" duration="600000" />
+      <workItem from="1652456315856" duration="16025000" />
+      <workItem from="1652713947813" duration="14775000" />
+      <workItem from="1652807292201" duration="12536000" />
+      <workItem from="1652896294593" duration="1384000" />
+      <workItem from="1652974842536" duration="13523000" />
+      <workItem from="1652993570241" duration="930000" />
+      <workItem from="1653068132728" duration="10992000" />
+      <workItem from="1653081100726" duration="1185000" />
+      <workItem from="1653318702318" duration="7981000" />
+      <workItem from="1653410640146" duration="10132000" />
+      <workItem from="1653491414774" duration="11254000" />
+      <workItem from="1653578413949" duration="13599000" />
+      <workItem from="1653663736330" duration="9580000" />
+      <workItem from="1653922578718" duration="14043000" />
+      <workItem from="1654011417805" duration="12273000" />
+      <workItem from="1654096620236" duration="3910000" />
+      <workItem from="1654100785541" duration="20032000" />
+      <workItem from="1654179230074" duration="14007000" />
+      <workItem from="1654204576273" duration="5000" />
+      <workItem from="1654208967941" duration="3000" />
+      <workItem from="1654614801984" duration="9263000" />
+      <workItem from="1654700261302" duration="825000" />
+      <workItem from="1654701097353" duration="2180000" />
+      <workItem from="1654706021208" duration="194000" />
+      <workItem from="1654706225582" duration="4149000" />
+      <workItem from="1654783869922" duration="7395000" />
+      <workItem from="1654873460566" duration="10488000" />
+      <workItem from="1655133467478" duration="397000" />
+      <workItem from="1655133875722" duration="9436000" />
+      <workItem from="1655143341045" duration="435000" />
+      <workItem from="1655143785870" duration="614000" />
+      <workItem from="1655144409612" duration="146000" />
+      <workItem from="1655144565644" duration="4115000" />
+      <workItem from="1655217790143" duration="1452000" />
+      <workItem from="1655219252216" duration="3536000" />
+      <workItem from="1655223336033" duration="2813000" />
+      <workItem from="1655229721604" duration="1424000" />
+      <workItem from="1655239370357" duration="1199000" />
+      <workItem from="1655301504435" duration="1449000" />
+    </task>
+    <task id="LOCAL-00038" summary="profile-edit pull request">
+      <created>1654617079600</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1654617079600</updated>
+    </task>
+    <task id="LOCAL-00039" summary="profile-edit pull request">
+      <created>1654617236227</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1654617236227</updated>
+    </task>
+    <task id="LOCAL-00040" summary="profile-edit pull request">
+      <created>1654617287788</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1654617287788</updated>
+    </task>
+    <task id="LOCAL-00041" summary="profile-edit pull request">
+      <created>1654617453180</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1654617453180</updated>
+    </task>
+    <task id="LOCAL-00042" summary="profile-edit pull request">
+      <created>1654617528348</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1654617528348</updated>
+    </task>
+    <task id="LOCAL-00043" summary="profile-edit pull request">
+      <created>1654618060367</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1654618060367</updated>
+    </task>
+    <task id="LOCAL-00044" summary="profile-edit pull request">
+      <created>1654618298088</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1654618298088</updated>
+    </task>
+    <task id="LOCAL-00045" summary="profile-edit pull request">
+      <created>1654618478813</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1654618478813</updated>
+    </task>
+    <task id="LOCAL-00046" summary="profile-edit done">
+      <created>1654619016435</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1654619016435</updated>
+    </task>
+    <task id="LOCAL-00047" summary="profile-edit done">
+      <created>1654619060283</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1654619060283</updated>
+    </task>
+    <task id="LOCAL-00048" summary="profile-edit done">
+      <created>1654619716982</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1654619716982</updated>
+    </task>
+    <task id="LOCAL-00049" summary="profile-edit done">
+      <created>1654619826137</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1654619826137</updated>
+    </task>
+    <task id="LOCAL-00050" summary="profile-edit done">
+      <created>1654619900999</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1654619900999</updated>
+    </task>
+    <task id="LOCAL-00051" summary="news done">
+      <created>1654622096897</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1654622096897</updated>
+    </task>
+    <task id="LOCAL-00052" summary="profile edit last release">
+      <created>1654702302546</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1654702302547</updated>
+    </task>
+    <task id="LOCAL-00053" summary="profile edit last release">
+      <created>1654702517242</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1654702517242</updated>
+    </task>
+    <task id="LOCAL-00054" summary="news last release">
+      <created>1654708808768</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1654708808768</updated>
+    </task>
+    <task id="LOCAL-00055" summary="news last release">
+      <created>1654709149201</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1654709149201</updated>
+    </task>
+    <task id="LOCAL-00056" summary="news last release">
+      <created>1654710099098</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1654710099098</updated>
+    </task>
+    <task id="LOCAL-00057" summary="feat: added location migration">
+      <created>1654879367027</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1654879367027</updated>
+    </task>
+    <task id="LOCAL-00058" summary="feat: added Location model">
+      <created>1654879488564</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1654879488564</updated>
+    </task>
+    <task id="LOCAL-00059" summary="feat: added JSON parser to frontend config">
+      <created>1654879602315</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1654879602315</updated>
+    </task>
+    <task id="LOCAL-00060" summary="feat: added LocationController.php">
+      <created>1654879771654</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1654879771654</updated>
+    </task>
+    <task id="LOCAL-00061" summary="feat: added LocationController.php">
+      <created>1654879863120</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1654879863120</updated>
+    </task>
+    <task id="LOCAL-00062" summary="fix: fixed migrations, add actionAdd to LocationController.php">
+      <created>1654881190615</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1654881190615</updated>
+    </task>
+    <task id="LOCAL-00063" summary="feat: done location">
+      <created>1654881408573</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1654881408573</updated>
+    </task>
+    <task id="LOCAL-00064" summary="fix: in index page now shows identified user data">
+      <created>1654881887422</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1654881887422</updated>
+    </task>
+    <task id="LOCAL-00065" summary="fix: in index page now shows identified user data">
+      <created>1654883132931</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1654883132931</updated>
+    </task>
+    <task id="LOCAL-00066" summary="fix: in index page now shows identified user data">
+      <created>1655134598236</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1655134598237</updated>
+    </task>
+    <task id="LOCAL-00067" summary="fix: in index page now shows identified user data">
+      <created>1655134608169</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1655134608169</updated>
+    </task>
+    <task id="LOCAL-00068" summary="fix: in index page now shows identified user data">
+      <created>1655134669858</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1655134669859</updated>
+    </task>
+    <task id="LOCAL-00069" summary="fix: in index page now shows identified user data">
+      <created>1655134723300</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1655134723300</updated>
+    </task>
+    <task id="LOCAL-00070" summary="Merge request for main branch">
+      <created>1655136840693</created>
+      <option name="number" value="00070" />
+      <option name="presentableId" value="LOCAL-00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1655136840693</updated>
+    </task>
+    <task id="LOCAL-00071" summary="merge request for main branch">
+      <created>1655138020557</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1655138020557</updated>
+    </task>
+    <task id="LOCAL-00072" summary="промежуточный коммит 19:38">
+      <created>1655138335580</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1655138335580</updated>
+    </task>
+    <task id="LOCAL-00073" summary="очистил frontend &amp; backend">
+      <created>1655138718062</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1655138718062</updated>
+    </task>
+    <task id="LOCAL-00074" summary="очистил frontend &amp; backend">
+      <created>1655138887290</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1655138887290</updated>
+    </task>
+    <task id="LOCAL-00075" summary="очистил frontend &amp; backend">
+      <created>1655139096545</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1655139096545</updated>
+    </task>
+    <task id="LOCAL-00076" summary="location">
+      <created>1655140508513</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1655140508513</updated>
+    </task>
+    <task id="LOCAL-00077" summary="location">
+      <created>1655143414060</created>
+      <option name="number" value="00077" />
+      <option name="presentableId" value="LOCAL-00077" />
+      <option name="project" value="LOCAL" />
+      <updated>1655143414060</updated>
+    </task>
+    <task id="LOCAL-00078" summary="location">
+      <created>1655143756231</created>
+      <option name="number" value="00078" />
+      <option name="presentableId" value="LOCAL-00078" />
+      <option name="project" value="LOCAL" />
+      <updated>1655143756231</updated>
+    </task>
+    <task id="LOCAL-00079" summary="location">
+      <created>1655143857085</created>
+      <option name="number" value="00079" />
+      <option name="presentableId" value="LOCAL-00079" />
+      <option name="project" value="LOCAL" />
+      <updated>1655143857086</updated>
+    </task>
+    <task id="LOCAL-00080" summary="deleted .pem files">
+      <created>1655149008457</created>
+      <option name="number" value="00080" />
+      <option name="presentableId" value="LOCAL-00080" />
+      <option name="project" value="LOCAL" />
+      <updated>1655149008457</updated>
+    </task>
+    <task id="LOCAL-00081" summary="deleted .pem files">
+      <created>1655149046204</created>
+      <option name="number" value="00081" />
+      <option name="presentableId" value="LOCAL-00081" />
+      <option name="project" value="LOCAL" />
+      <updated>1655149046204</updated>
+    </task>
+    <task id="LOCAL-00082" summary="main pull request">
+      <created>1655150274347</created>
+      <option name="number" value="00082" />
+      <option name="presentableId" value="LOCAL-00082" />
+      <option name="project" value="LOCAL" />
+      <updated>1655150274347</updated>
+    </task>
+    <task id="LOCAL-00083" summary="deleted .pem files">
+      <created>1655222961754</created>
+      <option name="number" value="00083" />
+      <option name="presentableId" value="LOCAL-00083" />
+      <option name="project" value="LOCAL" />
+      <updated>1655222961754</updated>
+    </task>
+    <task id="LOCAL-00084" summary="deleted member">
+      <created>1655223321441</created>
+      <option name="number" value="00084" />
+      <option name="presentableId" value="LOCAL-00084" />
+      <option name="project" value="LOCAL" />
+      <updated>1655223321442</updated>
+    </task>
+    <task id="LOCAL-00085" summary="deleted member">
+      <created>1655223361553</created>
+      <option name="number" value="00085" />
+      <option name="presentableId" value="LOCAL-00085" />
+      <option name="project" value="LOCAL" />
+      <updated>1655223361554</updated>
+    </task>
+    <task id="LOCAL-00086" summary="fix: ProfileController.php">
+      <created>1655224289113</created>
+      <option name="number" value="00086" />
+      <option name="presentableId" value="LOCAL-00086" />
+      <option name="project" value="LOCAL" />
+      <updated>1655224289114</updated>
+    </task>
+    <option name="localTasksCounter" value="87" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="main-updated" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/app/yii-application" />
+    </ignored-roots>
+    <MESSAGE value="fix: version with ajax request" />
+    <MESSAGE value="feat: created news&#10;&#10;CRUD created in backend.&#10;NewsController created in frontend.&#10;Admin editing news, user is looking over them." />
+    <MESSAGE value="profile-edit pull request" />
+    <MESSAGE value="profile-edit done" />
+    <MESSAGE value="news done" />
+    <MESSAGE value="profile edit last release" />
+    <MESSAGE value="news last release" />
+    <MESSAGE value="feat: added location" />
+    <MESSAGE value="feat: added location migration" />
+    <MESSAGE value="feat: added Location model" />
+    <MESSAGE value="feat: added JSON parser to frontend config" />
+    <MESSAGE value="feat: added LocationController.php" />
+    <MESSAGE value="fix: fixed migrations, add actionAdd to LocationController.php" />
+    <MESSAGE value="feat: done location" />
+    <MESSAGE value="fix: in index page now shows identified user data" />
+    <MESSAGE value="Merge request for main branch" />
+    <MESSAGE value="merge request for main branch" />
+    <MESSAGE value="промежуточный коммит 19:38" />
+    <MESSAGE value="очистил frontend &amp; backend" />
+    <MESSAGE value="location" />
+    <MESSAGE value="main pull request" />
+    <MESSAGE value="deleted .pem files" />
+    <MESSAGE value="deleted member" />
+    <MESSAGE value="deleted misc" />
+    <MESSAGE value="fix: ProfileController.php" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: ProfileController.php" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>

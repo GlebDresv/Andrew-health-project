@@ -1,0 +1,69 @@
+Index: .idea/dataSources.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"DataSourceManagerImpl\" format=\"xml\" multifile-model=\"true\">\n    <data-source source=\"LOCAL\" name=\"@localhost\" uuid=\"57a2ca1b-cacd-45ed-af9e-b56196697b35\">\n      <driver-ref>mysql.8</driver-ref>\n      <synchronize>true</synchronize>\n      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>\n      <jdbc-url>jdbc:mysql://localhost:3306</jdbc-url>\n      <working-dir>$ProjectFileDir$</working-dir>\n    </data-source>\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/dataSources.xml b/.idea/dataSources.xml
+--- a/.idea/dataSources.xml	
++++ b/.idea/dataSources.xml	
+@@ -7,6 +7,9 @@
+       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+       <jdbc-url>jdbc:mysql://localhost:3306</jdbc-url>
+       <working-dir>$ProjectFileDir$</working-dir>
++      <driver-properties>
++        <property name="allowPublicKeyRetrieval" value="TRUE" />
++      </driver-properties>
+     </data-source>
+   </component>
+ </project>
+\ No newline at end of file
+Index: app/console/migrations/m130526_201442_create_table_news.php
+===================================================================
+diff --git a/app/console/migrations/m130526_201442_create_table_news.php b/app/console/migrations/m130526_201442_create_table_news.php
+new file mode 100644
+--- /dev/null	
++++ b/app/console/migrations/m130526_201442_create_table_news.php	
+@@ -0,0 +1,40 @@
++<?php
++
++use yii\db\Migration;
++
++/**
++ * Class m130526_201442_create_table_news
++ */
++class m130526_201442_create_table_news extends Migration
++{
++
++    /**
++     * {@inheritdoc}
++     */
++    public function up()
++    {
++        $tableOptions = null;
++        if ($this->db->driverName === 'mysql') {
++            // http://stackoverflow.com/questions/766809/whats-the-difference-between-utf8-general-ci-and-utf8-unicode-ci
++            $tableOptions = 'CHARACTER SET utf8 COLLATE utf8_unicode_ci ENGINE=InnoDB';
++        }
++
++        $this->createTable('{{%news}}', [
++            'id' => $this->primaryKey(),
++            'header' => $this->string()->notNull()->unique(),
++            'text' => $this->text()->notNull(),
++            'image' => $this->string(),
++            'created_at' => $this->dateTime(),
++            'updated_at' => $this->dateTime(),
++            'photo_id' => $this->string(),
++        ], $tableOptions);
++    }
++
++    /**
++     * {@inheritdoc}
++     */
++    public function down()
++    {
++        $this->dropTable('{{%news}}');
++    }
++}
+\ No newline at end of file
