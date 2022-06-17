@@ -18,6 +18,11 @@ services:
       - ./app:/app
     depends_on:
       - mysql
+  composer:
+    build: ./docker/php
+    volumes:
+      - ./app:/app
+    command: composer install
   mysql:
     image: mysql:latest
     restart: always
