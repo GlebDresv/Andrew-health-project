@@ -30,8 +30,8 @@ if (Yii::$app->controller->action->id === 'login') {
         die();
     }
 
-    backend\web\assets\AdminLteAsset::register($this);
-    backend\web\assets\FontAwesomeAsset::register($this);
+    backend\assets\AdminLteAsset::register($this);
+    backend\assets\FontAwesomeAsset::register($this);
 
     $directoryAsset = Yii::$app->assetManager->getPublishedUrl('@vendor/almasaeed2010/adminlte/dist');
     ?>
