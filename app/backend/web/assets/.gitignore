@@ -1,2 +1,4 @@
 *
 !.gitignore
+!/AdminLteAsset.php
+!/FontAwesomeAsset.php
