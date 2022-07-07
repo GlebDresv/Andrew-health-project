@@ -16,11 +16,13 @@ class LocationController extends Controller
         $location = new Location();
 
         if (Yii::$app->request->post() && $location->validate()) {
-            $location->user_id = $request['user_id'];
-            $location->longitude = $request['longitude'];
-            $location->latitude = $request['latitude'];
-            $location->time = date('y-m-j,h-i-s');
-            $location->save();
+            foreach ($request as $array) {
+                $location->user_id = $array['user_id'];
+                $location->longitude = $array['longitude'];
+                $location->latitude = $array['latitude'];
+                $location->time = $array['time'];
+                $location->insert(true);
+            }
         }
     }
 
